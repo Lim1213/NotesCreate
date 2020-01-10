@@ -22,11 +22,11 @@ def content(request):
 
     headers = {'Authorization': 'Bearer ' + request.session['access_token']}
     # データをリクエスト
-    backlog_issues = requests.get(BACKLOG_URL, headers=headers).json()
+    backlog_issues = requests.get(BACKLOG_URL, headers=headers,verify=False).json()
 
     BACKLOG_URL = "https://k-bis.backlog.jp/api/v2/projects/1073915303/statuses"
 
-    status_list = requests.get(BACKLOG_URL, headers=headers).json()
+    status_list = requests.get(BACKLOG_URL, headers=headers,verify=False).json()
 
     d = {
         'title': backlog_issues["issueKey"] + backlog_issues["summary"],
@@ -54,7 +54,7 @@ def list(request):
     headers = {'Authorization': 'Bearer ' + request.session['access_token']}
 
     # データをリクエスト
-    backlog_issues = requests.get(BACKLOG_URL, params=BACKLOG_PARAMS, headers=headers).json()
+    backlog_issues = requests.get(BACKLOG_URL, params=BACKLOG_PARAMS, headers=headers,verify=False).json()
     print(backlog_issues)
     d = {
         'TaskList': backlog_issues,
@@ -71,7 +71,7 @@ def CreateText(request):
 
     headers = {'content-type': 'application/x-www-form-urlencoded','Authorization': 'Bearer ' + request.session['access_token']}
     # データをリクエスト
-    backlog_issues = requests.patch(BACKLOG_URL, params=BACKLOG_PARAMS, headers=headers).json()
+    backlog_issues = requests.patch(BACKLOG_URL, params=BACKLOG_PARAMS, headers=headers,verify=False).json()
 
     if not request.POST.get('commentFlg') == None :
 
@@ -83,7 +83,7 @@ def CreateText(request):
         }
 
         # データをリクエスト
-        backlog_issues = requests.post(BACKLOG_URL, params=BACKLOG_PARAMS, headers=headers).json()
+        backlog_issues = requests.post(BACKLOG_URL, params=BACKLOG_PARAMS, headers=headers,verify=False).json()
 
     form = cgi.FieldStorage()
     title = request.POST.get('title')
@@ -153,7 +153,7 @@ def checkApiKey(request):
                 'client_secret':'9UJwoMZnPexX70cS9lABSS0F7wEzRMHmzj4eZ150qyZZDnOZeFSzgPHrKYIrQ39X',
             }
             headers = {'content-type': 'application/x-www-form-urlencoded'}
-            backlog_issues = requests.post(BACKLOG_URL, params=BACKLOG_PARAMS, headers=headers).json()
+            backlog_issues = requests.post(BACKLOG_URL, params=BACKLOG_PARAMS, headers=headers,verify=False).json()
             request.session['access_token'] = backlog_issues['access_token']
             request.session['refresh_token'] = backlog_issues['refresh_token']
             return None
@@ -167,7 +167,7 @@ def checkApiKey(request):
             'refresh_token':request.session['refresh_token'],
         }
         headers = {'content-type': 'application/x-www-form-urlencoded'}
-        backlog_issues = requests.post(BACKLOG_URL, params=BACKLOG_PARAMS, headers=headers).json()
+        backlog_issues = requests.post(BACKLOG_URL, params=BACKLOG_PARAMS, headers=headers,verify=False).json()
         request.session['access_token'] = backlog_issues['access_token']
         request.session['refresh_token'] = backlog_issues['refresh_token']
         return None
