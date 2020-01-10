@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="jp">
+{% load static %}
+<!--
+□□□□□□□□□□□□□□□□□
+■■■■■■□□□□■■□□□□□
+□■□□■□□□□□□■□□□□□
+□■□□■□□□□□□■■□□□□
+□■■■■□□□□■□□■□□□□
+□■□□■□□□□■□□□□□□□
+□■□□■□□□□■□□□□□□□
+□■□□■□□□□■□□□□■□□
+□■■■■□□■□■□□□□■■□
+□■□□■□□■□■□□□□□■□
+□■□□■□□■□■□□□□□■□
+□■□□■□■■□■□□□□□□□
+□■■■■□■□□■□□□□■□□
+■■□□■□□□□■■□□■■□□
+□□□□■□□□□□■■■■□□□
+□□□□■□□□□□□□□□□□□
+□□□□□□□□■□□□□■□■□
+□□□□□□□□■□□□□■□■□
+□□□□□□□□■□□□□□□□□
+■■■■■■■■■■■■■■■■□
+□□□□□□□□■□□□□□□□□
+□□□□□□□□■□□□□□□□□
+□□□□□■■■■□□□□□□□□
+□□□□■■□□■■□□□□□□□
+□□□□■□□□□■□□□□□□□
+□□□□■□□□□■□□□□□□□
+□□□□■■□□□■□□□□□□□
+□□□□□■■■■■□□□□□□□
+□□□□□□□□■□□□□□□□□
+□□□□□□□■■□□□□□□□□
+□□□□□□■■□□□□□□□□□
+□□□□■■■□□□□□□□□□□
+□□□□□■□□□□□□□□□□□
+□□□□□■□□□□□□□□□□□
+□□□□□■□□□□□□■□□□□
+□□□□□■□□□□□□■■□□□
+□■■■■■■■■□□□□■■□□
+□□□□□■□□□■□□□□■□□
+□□□□□■□□□■□□□□■■□
+□□□□■■□□□■□□□□□■□
+□□□□■□□□□■□□□□□■□
+□□□□■□□□□■□□□□□□□
+□□□■■□□□□■□□□□□□□
+□□□■□□□□□■□□□□□□□
+□□■■□□□□■■□□□□□□□
+□■■□□□□□■□□□□□□□□
+□□□□□□■■■□□□□□□□□
+□□□□□□□□□□□□□□□□□
+□□□□□□□□□□□□□□□□□
+□□□□■□□□□□□□□□□□□
+□□□□■□□□□□□□□□□□□
+□□□□■□□□□□□□□□□□□
+□□□□■□□□□□□□□□□□□
+□□□□■□□□□□□□□□□□□
+□□□□■□□□□□□□□□□□□
+□□□□■□□□□□□□□□□□□
+□□□□■□□□□□□□□□□□□
+□□□□■□□□□□□□□□□□□
+□□□□■□□□□□□□□■□□□
+□□□□■□□□□□□□■■□□□
+□□□□■□□□□□□■■□□□□
+□□□□□■□□□■■■□□□□□
+□□□□□□■■■■□□□□□□□
+□□□□□□□□□□□□□□□□□
+□□□□□□□□□□□□□□□□□
+□□□□□□□□□□□□□□□□□
+□□■□□□□□□□□□□□□□□
+□□■□□□□□□□□■□□□□□
+□□■□□□□□□□□■■□□□□
+□□■□□□□□□□□□■■□□□
+□□■□□□□□□□□□□■□□□
+□□■□□□□□□□□□□■■□□
+□□■□□□□□□□□□□□■□□
+□□■□□□□□□□□□□□■□□
+□□■■□□■□□□□□□□■□□
+□□□■□■■□□□□□□□□□□
+□□□■■■□□□□□□□□□□□
+□□□□■□□□□□□□□□□□□
+□□□□□□□□□□□□□□□□□
+□□□□□□□□□□□□□□□□□
+□□□□□■□□□□□□□□□□□
+□□□□□■□□□□□□□□□□□
+□□□□□■□□□□□□■□□□□
+□□□□□■□□□□□□■■□□□
+□■■■■■■■■□□□□■■□□
+□□□□□■□□□■□□□□■□□
+□□□□□■□□□■□□□□■■□
+□□□□■■□□□■□□□□□■□
+□□□□■□□□□■□□□□□■□
+□□□□■□□□□■□□□□□□□
+□□□■■□□□□■□□□□□□□
+□□□■□□□□□■□□□□□□□
+□□■■□□□□■■□□□□□□□
+□■■□□□□□■□□□□□□□□
+□□□□□□■■■□□□□□□□□
+□□□□□□□□□□□□□□□□□
+□□□□□□□■■□□□□□□□□
+□□□□□□□□■■□□□□□□□
+□□□□■□□□□■■□□□□□□
+□□□□■□□□□□□□□□□□□
+□□□■■□□□□□□□□□□□□
+□□□■□□□□□□□□□□□□□
+□□□■□□□□□□□□□□□□□
+□□□■□□■■■■■■■□□□□
+□□□■■■■□□□□□■■□□□
+□□■■□□□□□□□□□■□□□
+□□□□□□□□□□□□□■□□□
+□□□□□□□□□□□□□■□□□
+□□□□□□□□□□□□■■□□□
+□□□□□□□□□□■■■□□□□
+□□□□□□□■■■■□□□□□□
+□□□□□□□□□□□□□□□□□
+□□□□□□□□□□□□□□□□□
+□□□■■■■■■■■■■□□□□
+□□□■□□□□□□□□■□□□□
+□□□■□□□□□□□□■□□□□
+□□□■■■■■■■■■■□□□□
+□□□■□□□□□□□□■□□□□
+□□□■□□□□□□□□■□□□□
+□□□■■■■■■■■■■□□□□
+□□□■□□□□□□□□■□□□□
+□□□■□□□□□□□□■□□□□
+□□□■■■■■■■■■■□□□□
+□□□□□■□□□□■□□□□□□
+□□□□□■□□□□■□□□□□□
+□□□□■■□□□□■□□□□■□
+□□□■■□□□□□■■□□■■□
+■■■■□□□□□□□■■■■□□
+□□□□■□□□□□□□□□□□□
+□□□□■□□□□□□□□□□□□
+□□□□■□□□□□□■■□□□□
+□■■■■■■■□□□□■■□□□
+□□□□■□□□□□□□□■■□□
+□□□■■□□□□□□□□□□□□
+□□□■□□□□□□■□□□□□□
+□□□■□□□□□□■□□□□□□
+□□■■□□□□□□■□□□□□□
+□□■□□□□□□□■□□□□□□
+□■■□□□□□□□■□□□□□□
+□□□□□□■■■■■□□□□□□
+□□□□□■□□□□■■■□□□□
+□□□□□■□□□■■□■■□□□
+□□□□□□■■■■□□□□□□□
+□□□□□□□□□□□□□□□□□
+□□□□□□□□□□□□□□□□□
+□□□□□□□□□□□□□□□□□
+□□■□□□□□□□□□□□□□□
+□□■□□□□□□□□■□□□□□
+□□■□□□□□□□□■■□□□□
+□□■□□□□□□□□□■■□□□
+□□■□□□□□□□□□□■□□□
+□□■□□□□□□□□□□■■□□
+□□■□□□□□□□□□□□■□□
+□□■□□□□□□□□□□□■□□
+□□■■□□■□□□□□□□■□□
+□□□■□■■□□□□□□□□□□
+□□□■■■□□□□□□□□□□□
+□□□□■□□□□□□□□□□□□
+□□□□□□□□□□□□□□□□□
+□□□□□□□□□□□□□□□□□
+□□□□□□□□□□□□□□□□□
+□□□□□□□□□□□□□□□□□
+□■■■■■■■■■■■■■□□□
+□□□□□□□□□■■□□□□□□
+□□□□□□□□■■□□□■□■□
+□□□□□□□■■□□□□■□■□
+□□□□□□□■□□□□□□□□□
+□□□□□□■■□□□□□□□□□
+□□□□□□■□□□□□□□□□□
+□□□□□□■□□□□□□□□□□
+□□□□□□■□□□□□□□□□□
+□□□□□□■■□□□□□□□□□
+□□□□□□□■■□□□□□□□□
+□□□□□□□□■■■□□□□□□
+□□□□□□□□□□■■■□□□□
+□□□□□□□□□□□□□□□□□
+-->
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Notes Creator</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.min.css">
+  <!-- Bootstrap core CSS -->
+  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="{% static 'css/scrolling-nav.css' %}" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.rawgit.com/tonystar/bootstrap-float-label/v3.0.1/dist/bootstrap-float-label.min.css"/>
+  <link href="{% static 'css/main.css' %}" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+  <!-- Navigation -->
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-info fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="/" data-toggle="tooltip" title="保守リストに戻ります。">Notes Creator</a>
+    <form class="form-inline">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" value ="{{ hour }}">
+      <button class="btn my-2 my-sm-0 btn-primary" type="submit">Search</button>
+    </form>
+  </nav>
+
+  <form method="post" action="/Create">
+    <input type="hidden" value="{{taskId}}" name="TaskId">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 mx-auto border-info" style="margin-top:70px;">
+          <div class="card">
+            <div class="card-header text-white bg-info">
+              <ul class="nav nav-tabs card-header-tabs">
+                <li class="nav-item"><a class="nav-link active" href="#" id="Contents">内容</a></li>
+                <li class="nav-item"><a class="nav-link" href="#" id="BaseInfo">基本情報</a></li>
+                <li class="nav-item"><a class="nav-link" href="#" id="Cause">原因</a></li>
+                <li class="nav-item"><a class="nav-link" href="#" id="Measures">対策</a></li>
+                <li class="nav-item"><a class="nav-link" href="#" id="Comment">コメント文書</a></li>
+              </ul>
+            </div>
+            <div class="card-body" id="Contents">
+                <div class="form-group has-float-label">
+                  <input type="text" class="form-control" id="title"value="{{ title }}" name="title">
+                  <small id="title" class="form-text text-muted">入力内容がzipファイル名になります。</small>
+                  <label for="Status">タイトル</label>
+                </div>
+                <div class="form-row">
+                  <div class="col">
+                    <div class="form-group has-float-label">
+                      <select class="form-control" id="Status" name="status">
+                        {% for Status in StatusList %}
+                        <option value="{{Status.id}}">{{Status.name}}</option>
+                        {% endfor %}
+                      </select>
+                      <input type="hidden" value="{{SelectStatus}}" name="selectedStatus">
+                      <label for="Status">状態</label>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="form-group has-float-label">
+                      <select class="form-control" id="Status" name="tantou">
+                        <option></option>
+                      </select>
+                      <label for="Status">対応担当者</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group has-float-label">
+                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="10" readonly style="background-color: white !important;" name="content">{{description}}</textarea>
+                  <label for="Status">保守内容</label>
+                </div>
+            </div>
+
+            <div class="card-body" id="BaseInfo" style="display:none">
+              <div class="form-row">
+                <div class="col">
+                  <div class="form-group has-float-label">
+                    <select class="form-control" id="CaseDivision" name="itemDivision">
+                      <option>スポット</option>
+                    </select>
+                    <label for="CaseDivision">案件区分</label>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="form-group has-float-label">
+                    <select class="form-control" id="SystemName" name="systemName">
+                      <option>K-BIS</option>
+                    </select>
+                    <label for="SystemName">システム名</label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="col">
+                  <div class="form-group has-float-label">
+                    <select class="form-control" id="WorkingPlace" name="workPlace">
+                      <option>アーベルソフト</option>
+                    </select>
+                    <label for="WorkingPlace">作業場所</label>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="form-group has-float-label">
+                    <select class="form-control" id="WorkingDivision" name="workDivision">
+                      <option>静的コンテンツ差し替え</option>
+                    </select>
+                    <label for="WorkingDivision">作業区分</label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="col">
+                  <div class="form-group has-float-label">
+                    <select class="form-control" id="WorkingPlace" name="owner">
+                      <option value="M00143">菅原 信平</option>
+                    </select>
+                    <label for="WorkingPlace">依頼者</label>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="form-group has-float-label">
+                    <select class="form-control" id="WorkingDivision" name="kankei">
+                      <option></option>
+                    </select>
+                    <label for="WorkingDivision">関係者</label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="col">
+                  <div class="form-group has-float-label">
+                    <input type="text" name="workDate" class="form-control">
+                    <label for="WorkingDate">作業日</label>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="form-group has-float-label">
+                    <input type="text" name="compDate" class="form-control">
+                    <label for="CompDate">完了日</label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="col">
+                  <div class="form-group has-float-label">
+                      <input type="text" class="form-control" name="startTime">
+                      <label for="WorkingPlace">開始時刻</label>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="form-group has-float-label">
+                      <input type="text" class="form-control" name="endTime">
+                      <label for="WorkingPlace">終了時刻</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-body" id="Cause" style="display:none">
+                <div class="form-group has-float-label">
+                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="10" name="genin"></textarea>
+                  <label for="Status">原因</label>
+                </div>
+              </div>
+
+              <div class="card-body" id="Measures" style="display:none">
+                <div class="form-group has-float-label" style="margin-bottom:0;">
+                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="10" name="taisaku"></textarea>
+                  <label for="Status">対策</label>
+                </div>
+                <div class="checkbox">
+                  <label><input type="checkbox" name="commentFlg">対策をBacklogコメントへ反映する。</label>
+                </div>
+              </div>
+
+              <div class="card-body" id="Comment" style="display:none">
+                <div class="card bg-light mb-3">
+                  <div class="card-header">
+                    コメント文書1
+                  </div>
+                    <div class="card-body Comment">
+                      <div class="form-row">
+                        <div class="col">
+                          <div class="form-group has-float-label">
+                              <input type="text" name=""class="form-control">
+                              <label for="WorkingPlace">開始時刻</label>
+                            </div>
+                          </div>
+                          <div class="col">
+                            <div class="form-group has-float-label">
+                              <input type="text" name=""class="form-control">
+                              <label for="WorkingPlace">終了時刻</label>
+                            </div>
+                          </div>
+                      </div>
+                      <div class="form-group has-float-label">
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+                        <label for="Status">内容</label>
+                      </div>
+                    </div>
+                </div>
+              </div>
+
+              <div class="card-footer text-white bg-info  text-right">
+                <button class="btn my-2 my-sm-0 btn-primary" type="submit">作成</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% csrf_token %}
+  </form>
+
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="{% static 'vendor/jquery-easing/jquery.easing.min.js' %}"></script>
+
+  <!-- Custom JavaScript for this theme -->
+  <script src="{% static 'js/scrolling-nav.js' %}"></script>
+  <script src="{% static 'js/main.js' %}"></script>
+ 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <script src=" https://ajax.googleapis.com/ajax/libs/jqueryui/1/i18n/jquery.ui.datepicker-ja.min.js"></script>
+ 
+<!--
+    BootStrap使ってるのでほとんどCSS書いてないんですけどね。
+    めちゃくちゃ楽にデザイン作れたのでWeb系の案件で積極的に使いたいですね。
+-->
+</body>
+
+</html>

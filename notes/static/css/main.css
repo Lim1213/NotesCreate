@@ -1,0 +1,35 @@
+.bg-info a:not(.active){
+	color:white !important;
+}
+
+.bg-info a{
+	font-weight: bold !important;
+}
+
+.has-float-label label{
+	font-weight: bold !important;
+	color:#17a2b8 !important;
+}
+
+.form-control:focus,.form-control:hover,.form-control:active, input:hover, input:active, textarea:hover, textarea:active{
+	outline: 0;
+	box-shadow: none;
+	border: 1px solid #17a2b8;
+	background-color: #ffffff;
+}
+
+.ui-datepicker { z-index: 1000 !important; }
+
+.tooltip-inner{
+  max-width: 100% !important;
+  text-align: left !important;
+}
+
+div.checkbox{
+	font-weight: bold !important;
+    color: #17a2b8 !important;
+}
+
+.task-list tbody tr{
+	cursor:pointer;
+}

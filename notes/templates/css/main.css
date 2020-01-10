@@ -1,0 +1,19 @@
+.bg-info a:not(.active){
+	color:white !important;
+}
+
+.bg-info a{
+	font-weight: bold !important;
+}
+
+.has-float-label label{
+	font-weight: bold !important;
+	color:#17a2b8 !important;
+}
+
+.form-control:focus, input:hover, input:active, textarea:hover, textarea:active{
+	outline: 0;
+	box-shadow: none;
+	border: 2px solid #17a2b8;
+	background-color: #ffffff;
+}
